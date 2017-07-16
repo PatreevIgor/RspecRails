@@ -1,0 +1,77 @@
+<%= form_with(model: character, local: true) do |form| %>
+  <% if character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% character.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :character_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age, id: :character_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :race %>
+    <%= form.text_field :race, id: :character_race %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hp %>
+    <%= form.number_field :hp, id: :character_hp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :physical_attack %>
+    <%= form.number_field :physical_attack, id: :character_physical_attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :physical_defense %>
+    <%= form.number_field :physical_defense, id: :character_physical_defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :physical_critical_chance %>
+    <%= form.number_field :physical_critical_chance, id: :character_physical_critical_chance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evasion %>
+    <%= form.number_field :evasion, id: :character_evasion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :accuracy %>
+    <%= form.number_field :accuracy, id: :character_accuracy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hp_recovery %>
+    <%= form.number_field :hp_recovery, id: :character_hp_recovery %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chance_block_shield %>
+    <%= form.number_field :chance_block_shield, id: :character_chance_block_shield %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cash %>
+    <%= form.text_field :cash, id: :character_cash %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

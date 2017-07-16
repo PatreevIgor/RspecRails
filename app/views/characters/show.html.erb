@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @character.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @character.age %>
+</p>
+
+<p>
+  <strong>Race:</strong>
+  <%= @character.race %>
+</p>
+
+<p>
+  <strong>Hp:</strong>
+  <%= @character.hp %>
+</p>
+
+<p>
+  <strong>Physical attack:</strong>
+  <%= @character.physical_attack %>
+</p>
+
+<p>
+  <strong>Physical defense:</strong>
+  <%= @character.physical_defense %>
+</p>
+
+<p>
+  <strong>Physical critical chance:</strong>
+  <%= @character.physical_critical_chance %>
+</p>
+
+<p>
+  <strong>Evasion:</strong>
+  <%= @character.evasion %>
+</p>
+
+<p>
+  <strong>Accuracy:</strong>
+  <%= @character.accuracy %>
+</p>
+
+<p>
+  <strong>Hp recovery:</strong>
+  <%= @character.hp_recovery %>
+</p>
+
+<p>
+  <strong>Chance block shield:</strong>
+  <%= @character.chance_block_shield %>
+</p>
+
+<p>
+  <strong>Cash:</strong>
+  <%= @character.cash %>
+</p>
+
+<%= link_to 'Edit', edit_character_path(@character) %> |
+<%= link_to 'Back', characters_path %>
